@@ -1,0 +1,4 @@
+std_msgs/Header header
+geometry_msgs/Point position
+lac_interfaces/EulerOrientation orientation
+lac_interfaces/ImagePair image_pair

@@ -1,0 +1,7 @@
+ros2 run orbslam3 stereo-inertial /workspace/ORB_SLAM3/Vocabulary/ORBvoc.txt /workspace/team_code/localization/stereo_cams.yaml false
+
+ros2 run localization localization_node 
+
+while true; do
+    ros2 run orbslam3 stereo-inertial /workspace/ORB_SLAM3/Vocabulary/ORBvoc.txt /workspace/team_code/localization/stereo_cams.yaml false
+done

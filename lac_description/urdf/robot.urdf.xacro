@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<robot name="robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <!-- LINKS -->
+    <link name="base_link">
+        <visual>
+            <origin rpy="0 0 0" xyz="0 0 0" />
+        </visual>
+        <collision>
+            <origin rpy="0 0 0" xyz="0 0 0" />
+        </collision>
+    </link>
+
+    <link name="fl_camera">
+        <visual>
+            <origin rpy="4.71238898038 0 4.71238898038" xyz="0 0 0" />
+        </visual>
+        <collision>
+            <origin rpy="4.71238898038 0 4.71238898038" xyz="0 0 0" />
+        </collision>
+    </link>
+
+    <link name="fr_camera">
+        <visual>
+            <origin rpy="4.71238898038 0 4.71238898038" xyz="0 0 0" />
+        </visual>
+        <collision>
+            <origin rpy="4.71238898038 0 4.71238898038" xyz="0 0 0" />
+        </collision>
+    </link>
+
+    <link name="bl_camera">
+        <visual>
+            <origin rpy="4.71238898038 0 1.57079632679" xyz="0 0 0" />
+        </visual>
+        <collision>
+            <origin rpy="4.71238898038 0 1.57079632679" xyz="0 0 0" />
+        </collision>
+    </link>
+
+    <link name="br_camera">
+        <visual>
+            <origin rpy="4.71238898038 0 1.57079632679" xyz="0 0 0" />
+        </visual>
+        <collision>
+            <origin rpy="4.71238898038 0 1.57079632679" xyz="0 0 0" />
+        </collision>
+    </link>
+
+    <!-- JOINTS -->
+    <joint name="base_to_fl_camera" type="fixed">
+        <origin rpy="4.71238898038 0 4.71238898038" xyz="0.28 0.081 0.131" />
+        <parent link="base_link" />
+        <child link="fl_camera" />
+    </joint>
+
+    <joint name="base_to_fr_camera" type="fixed">
+        <origin rpy="4.71238898038 0 4.71238898038" xyz="0.28 -0.081 0.131" />
+        <parent link="base_link" />
+        <child link="fr_camera" />
+    </joint>
+
+    <joint name="base_to_bl_camera" type="fixed">
+        <origin rpy="4.71238898038 0 1.57079632679" xyz="-0.28 0.081 0.131" />
+        <parent link="base_link" />
+        <child link="bl_camera" />
+    </joint>
+
+    <joint name="base_to_br_camera" type="fixed">
+        <origin rpy="4.71238898038 0 1.57079632679" xyz="-0.28 -0.081 0.131" />
+        <parent link="base_link" />
+        <child link="br_camera" />
+    </joint>
+</robot>
